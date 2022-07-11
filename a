@@ -1,0 +1,199 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro2/main/ui2"))()
+local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
+NotifyLib.prompt('Synapse V3 - Gui loading', 'Loading..', 5)
+NotifyLib.prompt('Synapse V3', 'Son them all', 5)
+NotifyLib.prompt('Synapse V3', 'b!#8304', 5)
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Synapse V3", "Serpent")
+
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Pet Simulator X")
+local Sliders = Window:NewTab("Sliders")
+local SlidersSection = Sliders:NewSection("Sliders")
+local Toggles = Window:NewTab("Toggles")
+local TogglesSection = Toggles:NewSection("Toggles")
+local Hubs = Window:NewTab("Hubs")
+local HubsSection = Hubs:NewSection("Hubs")
+local Chat = Window:NewTab("Chat")
+local ChatSection = Chat:NewSection("Chat Spam")
+local FE = Window:NewTab("FE")
+local FESection = FE:NewSection("FE scripts")
+local DaHood = Window:NewTab("Da Hood")
+local DaHoodSection = DaHood:NewSection("Silent Aim")
+local Keybind = Window:NewTab("Keybind")
+local KeybindSection = Keybind:NewSection("Keybind")
+local Misc = Window:NewTab("Misc")
+local MiscSection = Misc:NewSection("Misc")
+
+MainSection:NewButton("Pet Simulator X", "Executes the Pet Simulator X script", function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/pet_sim_x_lk.lua")()
+end)
+
+local MainSection = Main:NewSection("Blox Fruits")
+MainSection:NewButton("Blox Fruits", "Executes the Blox Fruits script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/ATR",true))()
+end)
+
+local MainSection = Main:NewSection("Big Paintball")
+MainSection:NewButton("Big Paintball", "Executes the Big Paintball script", function()
+    loadstring(game:HttpGet("https://www.pastebin.com/raw/PuaaGKsT"))()
+end)
+
+local MainSection = Main:NewSection("Build A Boat For The Treasure")
+MainSection:NewButton("Build A Boat For The Treasure", "Executes the Build A Boat For The Treasure script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Build%20A%20Boat%20For%20Treasure/BABFT"))()
+end)
+
+local MainSection = Main:NewSection("Mining Simulator 2")
+MainSection:NewButton("Mining Simulator 2", "Executes the Mining Simulator 2 script", function()
+loadstring(game:HttpGet("https://script.vestrahub.xyz",true))()
+end)
+
+
+-- Sliders
+SlidersSection:NewSlider("Speed", "Makes you go fast!", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+SlidersSection:NewSlider("Jump", "Makes you jump high!", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+-- Toggles.
+TogglesSection:NewToggle("SuperMan", "Makes your become SuperMan :)", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+TogglesSection:NewToggle("Speed", "Makes you walk fast", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+TogglesSection:NewToggle("Jump", "Makes Your jump high", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 16
+    end
+end)
+
+TogglesSection:NewToggle("Chat spam", ".", function(state)
+    if state then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/clickingsounds/chat-spam./main/on"))()    
+    else
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/clickingsounds/off/main/off"))()
+    end
+end)
+
+-- Hubs 
+HubsSection:NewButton("Animations Hub", "Press this button to obtain the Animations Hub :)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/mercifuI/FE-ANIMATION-HUB/main/animationhub.lua"))();
+end)
+
+HubsSection:NewButton("Domain X Hub", "Press this button to obtain the Domain X Hub  :)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+end)
+
+-- Chat spam 
+ChatSection:NewButton("Have a great day!", "be nice :)", function()
+    local A_1 = "Have a great day!"
+local A_2 = "All"
+local Event = Game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+while true do
+wait(0.1)
+Event:FireServer(A_1, A_2)
+end
+end)
+
+ChatSection:NewButton("ez kid", "make kids mad :)", function()
+    local A_1 = "ez kid"
+local A_2 = "All"
+local Event = Game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+while true do
+wait(0.1)
+Event:FireServer(A_1, A_2)
+end
+end)
+
+ChatSection:NewButton("rosex", "idk lol :)", function()
+    local A_1 = "lets have rosex"
+local A_2 = "All"
+local Event = Game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+while true do
+wait(0.1)
+Event:FireServer(A_1, A_2)
+end
+end)
+
+ChatSection:NewButton("Discord", "idk lol :)", function()
+    local A_1 = "Discord"
+local A_2 = "All"
+local Event = Game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+while true do
+wait(0.1)
+Event:FireServer(A_1, A_2)
+end
+end)
+
+-- FE
+FESection:NewButton("Amogus", "Makes you sussy.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/clickingsounds/Caca/main/caca"))()
+end)
+
+-- Da Hood
+
+DaHoodSection:NewButton("Da Hood Blue Dot Lock", "Executes the Blue Dot lock", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/QK9qNgV9"))()
+end)
+
+DaHoodSection:NewButton("Nix Ware", "Executes the Nix Ware script", function()
+    loadstring(game:HttpGet('https://ekso.gq/raw/scripts/zap.lua'))()
+end)
+
+local DaHoodSection = DaHood:NewSection("Dot Locks")
+
+DaHoodSection:NewButton("Vac-Dot, Keybind : C", "Executes Vac-Dot lock", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/2Ayva0qt", true))()
+end)
+
+DaHoodSection:NewButton("Best-Dot, Keybind : C", "Executes Best-Dot lock", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/z1C7QJ7y", true))()
+end)
+
+DaHoodSection:NewButton("Black-Dot, Keybind : Q", "Executes Black-Dot lock", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/434A1bj4", true))()
+end)
+
+DaHoodSection:NewButton("Moon-God, Keybind : Q", "Executes Moon-God lock", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Zv9XFvrU", true))()
+end)
+
+DaHoodSection:NewButton("Cam-Lock, Keybind : Q", "Executes Cam-Lock lock", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/8rEkZt61", true))()
+end)
+
+-- Keybind
+
+KeybindSection:NewKeybind("Toggle Ui", "Closes And Opens the UI", Enum.KeyCode.M, function()
+	Library:ToggleUI()
+end)
+
+-- Misc
+
+MiscSection:NewButton("Lower Gfx", "Gives you slightly more fps", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/69Z7xuAi", true))()
+end)
+
+MiscSection:NewButton("Fates Admin", "Executes Fates Admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
